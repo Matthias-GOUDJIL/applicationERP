@@ -5,21 +5,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+
+    <link rel="stylesheet" href="style.css">
+    
 </head>
 <body>
 
-    <button id="login">login</button>
-    <button id="inscription">nouveau compte client</button>
+    <button id="buttonLogin">login</button>
+    <button id="buttonNewUser">nouveau compte client</button>
 
-<p class="login hide">
-    <input type="text"     placeholder="name">
-    <input type="password" placeholder="password">
-    <button type="submit">ok</button>
-    <button type="reset">annuler</button>
-</p>
-<p class="inscription"></p>
-<p id="affichage-user"></p>
-<p id="affichage-facture"></p>
+    <hr width="100%" size=6 color="tomato"> 
+
+    <form id="formLogin" name="formLogin" class="hide">
+        <input id="nameLogin" name="nameLogin" type="text" placeholder="name">
+        <input id="passwordLogin" name="passwordLogin" type="password" placeholder="password">
+        
+        <button id="newFactureButton" name="newFactureButton" type="button" >ajouter une facture</button>
+        <fieldset id="newFactureField" name="newFactureField" class="hide"> 
+            <legend>facture</legend>
+            <input id="newFactureSociete" name="newFactureSociete" type="text" placeholder="prestataire">
+            <input id="newFactureMontant" name="newFactureMontant" type="text" placeholder="montant">
+            <button id="newFactureSubmit" type="button">ok</button>       
+        </fieldset>
+        <hr>
+        <button type="reset">reset</button>
+        <button id="loginSubmit" type="submit">connexion</button>  
+    </form>
+
+    <form id="formNewUser" name="formNewUser" class="hide">
+        <input id="newUserName"  name="newUserName"  type="text" placeholder="entrez votre nom">
+        <input id="newUserPassword" name="newUserPassword" type="password" placeholder="choisissez un mot de passe">
+        <fieldset > 
+            <legend>facture</legend>
+            <input id="newUserSociete" name="newUserSociete" type="text" placeholder="prestataire">
+            <input id="newUserMontant" name="newUserMontant" type="text" placeholder="montant">        
+        </fieldset>
+        <hr>
+        <button type="reset">reset</button>
+        <button id="newUserSubmit" type="submit">inscription</button>
+    </form>
+
+    <hr width="100%" size=6 color="tomato"> 
+
+    <p id="display" ></p>
+    <ul id="listFactures"></ul>
 
 
 <script src="script.js"></script>    
